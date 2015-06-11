@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:wd-financial="http://www.mulesoft.org/schema/mule/wd-financial" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:anaplan="http://www.mulesoft.org/schema/mule/anaplan" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.6.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/anaplan http://www.mulesoft.org/schema/mule/anaplan/current/mule-anaplan.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/wd-financial http://www.mulesoft.org/schema/mule/wd-financial/current/mule-wd-financial.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <wd-financial:config name="Workday_Financial_Management" financialUser="${workday.username}" financialPassword="${workday.password}" financialEndpoint="${workday.endpoint}" doc:name="Workday Financial Management">
+        <wd-financial:connection-pooling-profile initialisationPolicy="INITIALISE_ONE" exhaustedAction="WHEN_EXHAUSTED_GROW"/>
+    </wd-financial:config>
+    <data-mapper:config name="CSV_To_PutBudgetIncrementalRequestType" transformationGraphPath="csv_to_putbudgetincrementalrequesttype.grf" doc:name="CSV_To_PutBudgetIncrementalRequestType"/>
+    <anaplan:cert-auth-connection name="Anaplan__Certificate_Authentication" certificatePath="${anaplan.certificatePath}" url="${anaplan.apiUrl}" doc:name="Anaplan: Certificate Authentication"/>
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration1" host="localhost" port="8082" doc:name="HTTP Listener Configuration"/>
+    <flow name="Anaplan_To_WorkdayFlow">
+        <poll doc:name="Poll">
+            <fixed-frequency-scheduler frequency="86400" timeUnit="SECONDS"/>
+            <anaplan:export-from-model config-ref="Anaplan__Certificate_Authentication" exportId="${anaplan.exportName}" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan"/>
+        </poll>
+        <data-mapper:transform config-ref="CSV_To_PutBudgetIncrementalRequestType" doc:name="CSV To PutBudgetIncrementalRequestType"/>
+        <wd-financial:put-budget-incremental config-ref="Workday_Financial_Management" doc:name="Workday Financial Management"/>
+    </flow>
+</mule>
