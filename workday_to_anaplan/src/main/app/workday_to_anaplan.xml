@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:anaplan="http://www.mulesoft.org/schema/mule/anaplan" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:wd-financial="http://www.mulesoft.org/schema/mule/wd-financial" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.6.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/wd-financial http://www.mulesoft.org/schema/mule/wd-financial/current/mule-wd-financial.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/anaplan http://www.mulesoft.org/schema/mule/anaplan/current/mule-anaplan.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
+    <ws:consumer-config name="Web_Service_Consumer" wsdlLocation="https://wd2-impl-services1.workday.com/ccx/service/anaplan_pt1/Financial_Management/v23.0?wsdl" service="Financial_ManagementService" port="Financial_Management" serviceAddress="https://wd2-impl-services1.workday.com/ccx/service/anaplan_pt1/Financial_Management/v23.0" doc:name="Web Service Consumer">
+        <ws:security>
+            <ws:wss-username-token username="rkotzebue-impl@anaplan_pt1" password="Deloitte23#" passwordType="TEXT"/>
+        </ws:security>
+    </ws:consumer-config>
+    <wd-financial:config name="Workday_Financial_Management" financialUser="${workday.username}"  financialEndpoint="${workday.endpoint}" doc:name="Workday Financial Management" financialPassword="${workday.password}">
+        <wd-financial:connection-pooling-profile initialisationPolicy="INITIALISE_ONE" exhaustedAction="WHEN_EXHAUSTED_GROW"/>
+    </wd-financial:config>
+    <ws:consumer-config name="Web_Service_Consumer1" wsdlLocation="https://wd2-impl-services1.workday.com/ccx/service/deloitte_dpt2/Financial_Management/v23.0?wsdl" service="Financial_ManagementService" port="Financial_Management" serviceAddress="https://wd2-impl-services1.workday.com/ccx/service/deloitte_dpt2/Financial_Management/v23.0" doc:name="Web Service Consumer">
+        <ws:security>
+            <ws:wss-username-token username="lmcneil" password="Deloitte23#" passwordType="TEXT"/>
+        </ws:security>
+    </ws:consumer-config>
+    <data-mapper:config name="JSON_To_JSON" transformationGraphPath="json_to_json.grf" doc:name="JSON_To_JSON"/>
+    <data-mapper:config name="XML_To_CSV" transformationGraphPath="xml_to_csv.grf" doc:name="XML_To_CSV"/>
+    <data-mapper:config name="GetJournalsResponseType_To_CSV" transformationGraphPath="getjournalsresponsetype_to_csv.grf" doc:name="GetJournalsResponseType_To_CSV"/>
+    <wd-financial:config name="Workday_Financial_Management1" financialUser="rkotzebue-impl@deloitte_dt2" doc:name="Workday Financial Management">
+        <wd-financial:connection-pooling-profile initialisationPolicy="INITIALISE_ONE" exhaustedAction="WHEN_EXHAUSTED_GROW"/>
+    </wd-financial:config>
+    <file:connector name="File" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+    <anaplan:cert-auth-connection name="Anaplan__Certificate_Authentication" certificatePath="${anaplan.certificatePath}" doc:name="Anaplan: Certificate Authentication" url="${anaplan.apiUrl}"/>
+    <file:connector name="File1" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+    <flow name="wd_anaplan_importFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <scripting:component doc:name="Groovy">
+            <scripting:script engine="Groovy"><![CDATA[//initiate getjournalsrequesttype object
+com.workday.financial.GetJournalsRequestType getJournalsType = new com.workday.financial.GetJournalsRequestType();
+
+//return object
+return getJournalsType;]]></scripting:script>
+        </scripting:component>
+        <wd-financial:get-journals config-ref="Workday_Financial_Management" doc:name="WD Finance Connector"/>
+        <data-mapper:transform config-ref="GetJournalsResponseType_To_CSV" doc:name="Map to CSV"/>
+        <set-session-variable variableName="CSV_output" value="#[message.payload]" doc:name="Store CSV in memory"/>
+        <scatter-gather doc:name="Split">
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Company from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-Company"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Workday ID from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-WorkdayID"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Customer from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-Customer"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Cost Center from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-Cost Center"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Revenue Category from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-Revenue"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Sales Item from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-SalesItem"/>
+            <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Ledger Account from Get_Journals-anaplan_pt1-headers.csv" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan-Ledger"/>
+        </scatter-gather>
+        <set-payload value="#[sessionVars['CSV_output']]" doc:name="Set Payload"/>
+        <anaplan:import-to-model config-ref="Anaplan__Certificate_Authentication" columnSeparator="${anaplan.columnSeparator}" delimiter="${anaplan.delimiter}" importId="Workday Actual Revenue Load from Get_Journals-anaplan_pt1-he" modelId="${anaplan.modelId}" workspaceId="${anaplan.workspaceId}" doc:name="Anaplan"/>
+        
+    </flow>
+</mule>

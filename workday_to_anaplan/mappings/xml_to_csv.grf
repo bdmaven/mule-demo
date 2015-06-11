@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="rkotzebue" created="Thu Mar 19 15:12:50 PDT 2015" description="XML To CSV" guiVersion="3.4.4.P" id="1426827269393" licenseCode="Unlicensed" licenseType="Unknown" modified="Thu Mar 19 15:12:50 PDT 2015" modifiedBy="rkotzebue" name="XML_To_CSV" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/Revenue" _dataStructure="OBJECT" _id="__id" _type="Input" id="127a634f-b2e7-424f-a730-649d21c042d1">
+<Record fieldDelimiter="," name="Revenue" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/Revenue/Journal_Descriptor" containerType="SINGLE" label="Journal_Descriptor" name="Journal_Descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __referenceCounter="1" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _type="Output" id="9942252d-b35e-4ec8-89d3-2777550aa66b">
+<Record fieldDelimiter="," name="Revenue" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field containerType="SINGLE" eofAsDelimiter="true" label="Journal_Descriptor" name="Journal_Descriptor" size="10" type="string"/>
+<Field __artificialType="_id" name="__id" type="long"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node charset="UTF-8" enabled="enabled" excludeFields="__id" fileURL="dict:outputPayload" guiName="CSV WRITER" guiX="900" guiY="20" id="DATA_WRITER0" quotedStrings="true" type="DATA_WRITER">
+<attr name="_data_format"><![CDATA[CSV]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Foreach 'Revenue' -&gt; 'Revenue'" guiX="460" guiY="20" id="FOREACH_REVENUE_REVENUE" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = str2long(input.__id);
+//END -> DO NOT REMOVE
+output.Journal_Descriptor = input.Journal_Descriptor;
+]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="XML READER" guiX="20" guiY="20" id="XML_READER0" type="XML_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context outPort="0" sequenceField="__id" xpath="/Revenue">
+  <Mapping cloverField="Journal_Descriptor" trim="true" xpath="Journal_Descriptor"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_REVENUE_REVENUE:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="9942252d-b35e-4ec8-89d3-2777550aa66b" outPort="Port 0 (out)" toNode="DATA_WRITER0:0"/>
+<Edge debugMode="true" fromNode="XML_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="127a634f-b2e7-424f-a730-649d21c042d1" outPort="Port 0 (out)" toNode="FOREACH_REVENUE_REVENUE:0"/>
+</Phase>
+</Graph>

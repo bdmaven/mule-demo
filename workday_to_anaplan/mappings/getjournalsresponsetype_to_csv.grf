@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="rkotzebue" created="Thu Mar 19 23:06:56 PDT 2015" description="GetJournalsResponseType To CSV" guiVersion="3.4.4.P" id="1426874604178" licenseCode="Unlicensed" licenseType="Unknown" modified="Thu Mar 19 23:06:56 PDT 2015" modifiedBy="rkotzebue" name="GetJournalsResponseType_To_CSV" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="3" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/approvedByPersonReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="87f925da-c952-4e05-88cb-ee22089afa6f">
+<Record fieldDelimiter="," name="approvedByPersonReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="5" __sourcePath="{}/object/requestCriteria/approvedByPersonReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="40" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/approvedByReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="943895c1-66c0-4014-83ed-9dd5a24bb680">
+<Record fieldDelimiter="," name="approvedByReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="42" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/approvedByReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="43" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="b9b40965-2ff2-4539-b20c-e09b374d42a1">
+<Record fieldDelimiter="," name="attachmentData" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="43" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/comment" containerType="SINGLE" label="comment" name="comment" type="string"/>
+<Field __index="44" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/compressed" containerType="SINGLE" label="compressed" name="compressed" type="boolean"/>
+<Field __index="45" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/contentType" containerType="SINGLE" label="contentType" name="contentType" type="string"/>
+<Field __index="46" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/encoding" containerType="SINGLE" label="encoding" name="encoding" type="string"/>
+<Field __index="47" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/fileContent" containerType="SINGLE" label="fileContent" name="fileContent" type="byte"/>
+<Field __index="48" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/attachmentData/filename" containerType="SINGLE" label="filename" name="filename" type="string"/>
+</Record>
+</Metadata>
+<Metadata __referenceCounter="1" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _type="Output" id="77c945e9-bf91-407e-b7e1-bd5676e274b4">
+<Record fieldDelimiter="," name="Get_Journals_anaplan_pt1_headers" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field containerType="SINGLE" label="Journal_WID" name="Journal_WID" size="10" type="string"/>
+<Field __dmType="Calendar" containerType="SINGLE" label="Accounting_Date" name="Accounting_Date" size="10" type="string"/>
+<Field containerType="SINGLE" label="Company" name="Company" size="10" type="string"/>
+<Field containerType="SINGLE" label="Company_ID" name="Company_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger" name="Ledger" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger_WID" name="Ledger_WID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Cost_Center" name="Cost_Center" size="10" type="string"/>
+<Field containerType="SINGLE" label="Cost_Center_ID" name="Cost_Center_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Revenue_Category_ID" name="Revenue_Category_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Sales_Item_ID" name="Sales_Item_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Customer" name="Customer" size="10" type="string"/>
+<Field containerType="SINGLE" label="Customer_ID" name="Customer_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger_Account_ID" name="Ledger_Account_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger_Account_Parent_ID" name="Ledger_Account_Parent_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Debit_Amount" length="12" name="Debit_Amount" scale="2" size="10" type="decimal"/>
+<Field containerType="SINGLE" label="Credit_Amount" length="12" name="Credit_Amount" scale="2" size="10" type="decimal"/>
+<Field containerType="SINGLE" eofAsDelimiter="true" label="Currency_ID" name="Currency_ID" size="10" type="string"/>
+<Field __artificialType="_id" name="__id" type="long"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="0" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="30dcb048-a1b2-424d-a593-bbac23f9cb1b">
+<Record fieldDelimiter="," name="GetJournalsResponseType" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="132" __sourcePath="{}/object/version" containerType="SINGLE" label="version" name="version" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="3" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/approvedByPersonReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="87f925da-c952-4e05-88cb-ee22089afa6f" _parent_id="__parent_id" _type="Input" id="29483f6e-c78f-475c-b4ae-d29676fc297c">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="3" __sourcePath="{}/object/requestCriteria/approvedByPersonReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="4" __sourcePath="{}/object/requestCriteria/approvedByPersonReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="6" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/bookReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="e7166040-26b3-4115-a2be-60af79e33e9b">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="6" __sourcePath="{}/object/requestCriteria/bookReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="7" __sourcePath="{}/object/requestCriteria/bookReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="11" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/journalSourceReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="f4a7a1de-8da8-42dc-bb60-1f8e5f21a295" _parent_id="__parent_id" _type="Input" id="421d6d8b-9128-474a-9d27-97e6c4f12cea">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="11" __sourcePath="{}/object/requestCriteria/journalSourceReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="12" __sourcePath="{}/object/requestCriteria/journalSourceReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="14" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="27e4d8e7-5b33-4094-964f-8d8c395f5c97" _parent_id="__parent_id" _type="Input" id="733ff3dd-50aa-4e18-add9-26ea7c7a1657">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="14" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/ID/parentId" containerType="SINGLE" label="parentId" name="parentId" type="string"/>
+<Field __index="15" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/ID/parentType" containerType="SINGLE" label="parentType" name="parentType" type="string"/>
+<Field __index="16" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="17" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="19" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/organizationReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="b5832dc6-be12-4746-b15b-c1b11e9b9a2a" _parent_id="__parent_id" _type="Input" id="5d2bdd2d-3db8-4401-b658-7986be386e50">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="19" __sourcePath="{}/object/requestCriteria/organizationReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="20" __sourcePath="{}/object/requestCriteria/organizationReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="22" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/originatedByPersonReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="4d4cb0ea-207c-4ef0-87bb-b78885c98f73" _parent_id="__parent_id" _type="Input" id="495c1b09-28f2-4834-806f-6bf48fda8693">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="22" __sourcePath="{}/object/requestCriteria/originatedByPersonReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="23" __sourcePath="{}/object/requestCriteria/originatedByPersonReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="27" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/statusReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="55449dd3-05b9-4c36-9c32-d4fda68316ed" _parent_id="__parent_id" _type="Input" id="1250ed5c-82d4-41d9-b562-ad07eb9ea01a">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="27" __sourcePath="{}/object/requestCriteria/statusReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="28" __sourcePath="{}/object/requestCriteria/statusReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="33" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/worktagsReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="070ca22a-35e2-418f-9385-fecba6d28490" _parent_id="__parent_id" _type="Input" id="7b980609-8670-4d98-8ced-1a9f8e42ad42">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="33" __sourcePath="{}/object/requestCriteria/worktagsReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="34" __sourcePath="{}/object/requestCriteria/worktagsReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="36" __referenceCounter="0" __sourcePath="{}/object/requestReferences/journalEntryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8267b04d-0687-485f-ba6e-93c7097acc69" _parent_id="__parent_id" _type="Input" id="5d03913d-5a32-41fb-a77d-b28ee54b2a63">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="36" __sourcePath="{}/object/requestReferences/journalEntryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="37" __sourcePath="{}/object/requestReferences/journalEntryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="40" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/approvedByReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="943895c1-66c0-4014-83ed-9dd5a24bb680" _parent_id="__parent_id" _type="Input" id="b6c9edce-3589-4f97-9903-45982ff6afbc">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="40" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/approvedByReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="41" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/approvedByReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="49" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/balancingWorktagReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="f2aaa275-16f2-4e25-aa15-bf0f93d4d45d">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="49" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/balancingWorktagReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="50" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/balancingWorktagReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="52" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/bookCodeReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="804781e4-0b48-4991-a6e1-ad0b586312e4">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="52" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/bookCodeReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="53" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/bookCodeReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="55" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/companyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="a5e26038-a1f0-4d36-9e5d-c95499303c4f">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="55" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/companyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="56" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/companyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="59" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/currencyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="71a87545-f15f-48fa-b13b-06094d6a76b8">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="59" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/currencyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="60" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/currencyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="62" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/balancingWorktagAffiliateReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="a1ed0684-c909-4318-a1e8-f782cc60885f" _parent_id="__parent_id" _type="Input" id="1a8a78fe-f0ec-405b-aa52-9d46d32283f4">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="62" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/balancingWorktagAffiliateReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="63" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/balancingWorktagAffiliateReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="68" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/currencyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="a1ed0684-c909-4318-a1e8-f782cc60885f" _parent_id="__parent_id" _type="Input" id="6f68b30a-e85f-4bae-bedd-1f60dd499f1d">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="68" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/currencyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="69" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/currencyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="73" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="a1ed0684-c909-4318-a1e8-f782cc60885f" _parent_id="__parent_id" _type="Input" id="9e415168-e89a-43fc-a5ef-a2f805dee217">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="73" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/ID/parentId" containerType="SINGLE" label="parentId" name="parentId" type="string"/>
+<Field __index="74" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/ID/parentType" containerType="SINGLE" label="parentType" name="parentType" type="string"/>
+<Field __index="75" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="76" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="80" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/lineCompanyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="a1ed0684-c909-4318-a1e8-f782cc60885f" _parent_id="__parent_id" _type="Input" id="75913332-5432-4329-b560-24955351d1e0">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="80" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/lineCompanyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="81" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/lineCompanyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="85" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/worktagsReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="1e4f7e62-88d9-4dc1-b286-b5def2dab9bc" _parent_id="__parent_id" _type="Input" id="edb56aba-3dc4-44a0-8417-bf0f44e3e614">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="85" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/worktagsReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="86" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/worktagsReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="88" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="70dc458e-937d-4f0d-9309-3144562a3217">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="88" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="89" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="92" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalSourceReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="d79319e2-618d-44f4-9689-99d2a4e5f752">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="92" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalSourceReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="93" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalSourceReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="95" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalStatusReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="fe4b45b4-78ec-4f0f-a764-9c14f46ac9c0">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="95" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalStatusReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="96" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalStatusReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="99" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerPeriodReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="36371601-937c-4068-954d-a40c0a187f50">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="99" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerPeriodReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="100" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerPeriodReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="102" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="35cc8afd-2fe3-4fe5-927e-76b3cbe8df98">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="102" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="103" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="106" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/operationalTransactionReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="c65a114b-daec-47a8-b5dd-ee4f526d168a">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="106" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/operationalTransactionReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="107" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/operationalTransactionReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="109" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/originatedByReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="53ce8e7e-4f8b-4d08-871d-05d9f8c5834e">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="109" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/originatedByReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="110" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/originatedByReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="112" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversedByJournalEntryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="b5489311-fa5c-47fb-811e-e512864471f3">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="112" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversedByJournalEntryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="113" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversedByJournalEntryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="115" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversesJournalEntryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="b7cce2c7-e048-46bf-a9ad-473d85322c73">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="115" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversesJournalEntryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="116" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversesJournalEntryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="121" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="850e16ff-711d-4637-8aa6-a08a5371e8fc" _parent_id="__parent_id" _type="Input" id="4f904cf3-20bd-4a0b-b347-cd3c92de5b6c">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="121" __sourcePath="{}/object/responseData/journalEntry/journalEntryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="122" __sourcePath="{}/object/responseData/journalEntry/journalEntryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="39" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="7d435572-892c-4437-9932-659ea21e2197" _parent_id="__parent_id" _type="Input" id="850e16ff-711d-4637-8aa6-a08a5371e8fc">
+<Record fieldDelimiter="," name="journalEntry" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="123" __sourcePath="{}/object/responseData/journalEntry/journalEntryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="39" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="850e16ff-711d-4637-8aa6-a08a5371e8fc" _parent_id="__parent_id" _type="Input" id="ed829f8c-e45f-4135-a994-f664f3ebcb99">
+<Record fieldDelimiter="," name="journalEntryData" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __dmType="Calendar" __index="39" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/accountingDate" containerType="SINGLE" label="accountingDate" name="accountingDate" type="string"/>
+<Field __index="51" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/balancingWorktagReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+<Field __index="54" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/bookCodeReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_1" type="string"/>
+<Field __index="57" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/companyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_2" type="string"/>
+<Field __dmType="Calendar" __index="58" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/creationDate" containerType="SINGLE" label="creationDate" name="creationDate" type="string"/>
+<Field __index="61" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/currencyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_3" type="string"/>
+<Field __index="90" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_4" type="string"/>
+<Field __index="91" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalNumber" containerType="SINGLE" label="journalNumber" name="journalNumber" type="string"/>
+<Field __index="94" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalSourceReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_5" type="string"/>
+<Field __index="97" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalStatusReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_6" type="string"/>
+<Field __dmType="Calendar" __index="98" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/lastUpdatedDate" containerType="SINGLE" label="lastUpdatedDate" name="lastUpdatedDate" type="string"/>
+<Field __index="101" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerPeriodReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_7" type="string"/>
+<Field __index="104" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/ledgerReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_8" type="string"/>
+<Field __index="105" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/memo" containerType="SINGLE" label="memo" name="memo" type="string"/>
+<Field __index="108" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/operationalTransactionReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_9" type="string"/>
+<Field __index="111" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/originatedByReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_10" type="string"/>
+<Field __index="114" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversedByJournalEntryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_11" type="string"/>
+<Field __index="117" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/reversesJournalEntryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_12" type="string"/>
+<Field __index="118" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/totalLedgerCredits" containerType="SINGLE" label="totalLedgerCredits" name="totalLedgerCredits" type="decimal"/>
+<Field __index="119" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/totalLedgerDebits" containerType="SINGLE" label="totalLedgerDebits" name="totalLedgerDebits" type="decimal"/>
+<Field __dmType="Calendar" __index="120" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/transactionDate" containerType="SINGLE" label="transactionDate" name="transactionDate" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/companyReference/ID[type='WID']/value" containerType="SINGLE" label="Company_ID" name="Company_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryReference/ID[type='WID']/value" containerType="SINGLE" label="Journal_WID" name="Journal_WID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/ledgerReference/ID[type='WID']/value" containerType="SINGLE" label="Ledger_WID" name="Ledger_WID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/debitAmount" containerType="SINGLE" label="Debit_Amount" name="Debit_Amount" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/creditAmount" containerType="SINGLE" label="Credit_Amount" name="Credit_Amount" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/currencyReference/ID[type='Currency_ID']/value" containerType="SINGLE" label="Currency_ID" name="Currency_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/worktagsReference/ID[type='Cost_Center_Reference_ID']/value" containerType="SINGLE" label="Cost_Center_ID" name="Cost_Center_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/worktagsReference/ID[type='Revenue_Category_ID']/value" containerType="SINGLE" label="Revenue_Category_ID" name="Revenue_Category_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/worktagsReference/ID[type='Sales_Item_ID']/value" containerType="SINGLE" label="Sales_Item_ID" name="Sales_Item_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/worktagsReference/ID[type='Customer_ID']/value" containerType="SINGLE" label="Customer_ID" name="Customer_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/worktagsReference/ID[type='Cost_Center_Reference_ID']/value" containerType="SINGLE" label="Cost_Center_Reference_ID" name="Cost_Center_Reference_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/ledgerAccountReference/ID[type= 'Ledger_Account_ID']/value" containerType="SINGLE" label="Ledger_Account_ID" name="Ledger_Account_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/ledgerAccountReference/ID/parentId" containerType="SINGLE" label="Ledger_Account_Parent_ID" name="Ledger_Account_Parent_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/journalEntryLineData/lineOrder" containerType="SINGLE" label="Line_Order" name="Line_Order" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="62" __referenceCounter="1" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="ed829f8c-e45f-4135-a994-f664f3ebcb99" _parent_id="__parent_id" _type="Input" id="a1ed0684-c909-4318-a1e8-f782cc60885f">
+<Record fieldDelimiter="," name="journalEntryLineData" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="64" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/balancingWorktagAffiliateReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+<Field __dmType="Calendar" __index="65" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/budgetDate" containerType="SINGLE" label="budgetDate" name="budgetDate" type="string"/>
+<Field __index="66" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/creditAmount" containerType="SINGLE" label="creditAmount" name="creditAmount" type="decimal"/>
+<Field __index="67" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/currencyRate" containerType="SINGLE" label="currencyRate" name="currencyRate" type="decimal"/>
+<Field __index="70" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/currencyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_1" type="string"/>
+<Field __index="71" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/debitAmount" containerType="SINGLE" label="debitAmount" name="debitAmount" type="decimal"/>
+<Field __index="72" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/excludeFromSpendReport" containerType="SINGLE" label="excludeFromSpendReport" name="excludeFromSpendReport" type="boolean"/>
+<Field __index="77" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerAccountReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_2" type="string"/>
+<Field __index="78" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerCreditAmount" containerType="SINGLE" label="ledgerCreditAmount" name="ledgerCreditAmount" type="decimal"/>
+<Field __index="79" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/ledgerDebitAmount" containerType="SINGLE" label="ledgerDebitAmount" name="ledgerDebitAmount" type="decimal"/>
+<Field __index="82" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/lineCompanyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_3" type="string"/>
+<Field __index="83" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/lineOrder" containerType="SINGLE" label="lineOrder" name="lineOrder" type="string"/>
+<Field __index="84" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/memo" containerType="SINGLE" label="memo" name="memo" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/../journalEntryReference/ID[type= 'WID']/value" containerType="SINGLE" label="rule_line_Journal_WID" name="rule_line_Journal_WID" type="string"/>
+<Field __artificialType="XPATH" __dmType="Calendar" __xpath="{=}/../accountingDate" containerType="SINGLE" label="rule_line_Accounting_Date" name="rule_line_Accounting_Date" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/../companyReference/ID[type='Company_Reference_ID']/value" containerType="SINGLE" label="rule_line_Company_ID" name="rule_line_Company_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/../ledgerReference/ID[type='WID']/value" containerType="SINGLE" label="rule_line_Ledger_WID" name="rule_line_Ledger_WID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/currencyReference/ID[type='Currency_ID']/value" containerType="SINGLE" label="rule_line_Currency_ID" name="rule_line_Currency_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference/ID[type='Cost_Center_Reference_ID']/value" containerType="SINGLE" label="rule_line_Cost_Center_ID" name="rule_line_Cost_Center_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference/ID[type='Revenue_Category_ID']/value" containerType="SINGLE" label="rule_line_Revenue_Category_ID" name="rule_line_Revenue_Category_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference/ID[type='Sales_Item_ID']/value" containerType="SINGLE" label="rule_line_Sales_Item" name="rule_line_Sales_Item" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference/ID[type='Customer_ID']/value" containerType="SINGLE" label="rule_line_Customer_ID" name="rule_line_Customer_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/ledgerAccountReference/ID[type= 'Ledger_Account_ID']/value" containerType="SINGLE" label="rule_line_Ledger_Account_ID" name="rule_line_Ledger_Account_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/ledgerAccountReference/ID/parentId" containerType="SINGLE" label="rule_line_Ledger_Account_Parent_ID" name="rule_line_Ledger_Account_Parent_ID" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/../companyReference/descriptor" containerType="SINGLE" label="rule_line_Company" name="rule_line_Company" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/../ledgerReference/descriptor" containerType="SINGLE" label="rule_line_Ledger" name="rule_line_Ledger" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference[ID/type='Cost_Center_Reference_ID']/descriptor" containerType="SINGLE" label="rule_line_Cost_Center" name="rule_line_Cost_Center" type="string"/>
+<Field __artificialType="XPATH" __xpath="{=}/worktagsReference[ID/type='Customer_ID']/descriptor" containerType="SINGLE" label="rule_line_Customer" name="rule_line_Customer" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="36" __referenceCounter="0" __sourcePath="{}/object/requestReferences/journalEntryReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8404bfab-0f0e-441f-8743-b669f6598725" _parent_id="__parent_id" _type="Input" id="8267b04d-0687-485f-ba6e-93c7097acc69">
+<Record fieldDelimiter="," name="journalEntryReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="38" __sourcePath="{}/object/requestReferences/journalEntryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="11" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/journalSourceReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="f4a7a1de-8da8-42dc-bb60-1f8e5f21a295">
+<Record fieldDelimiter="," name="journalSourceReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="13" __sourcePath="{}/object/requestCriteria/journalSourceReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="14" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/ledgerAccountReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="27e4d8e7-5b33-4094-964f-8d8c395f5c97">
+<Record fieldDelimiter="," name="ledgerAccountReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="18" __sourcePath="{}/object/requestCriteria/ledgerAccountReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="19" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/organizationReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="b5832dc6-be12-4746-b15b-c1b11e9b9a2a">
+<Record fieldDelimiter="," name="organizationReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="21" __sourcePath="{}/object/requestCriteria/organizationReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="22" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/originatedByPersonReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="4d4cb0ea-207c-4ef0-87bb-b78885c98f73">
+<Record fieldDelimiter="," name="originatedByPersonReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="24" __sourcePath="{}/object/requestCriteria/originatedByPersonReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="0" __sourcePath="{}/object/requestCriteria" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="80f56af2-2fe7-41e0-a923-cc53e4eee04e">
+<Record fieldDelimiter="," name="requestCriteria" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __dmType="Calendar" __index="0" __sourcePath="{}/object/requestCriteria/accountingFromDate" containerType="SINGLE" label="accountingFromDate" name="accountingFromDate" type="string"/>
+<Field __dmType="Calendar" __index="1" __sourcePath="{}/object/requestCriteria/accountingToDate" containerType="SINGLE" label="accountingToDate" name="accountingToDate" type="string"/>
+<Field __index="2" __sourcePath="{}/object/requestCriteria/adjustmentJournal" containerType="SINGLE" label="adjustmentJournal" name="adjustmentJournal" type="boolean"/>
+<Field __index="8" __sourcePath="{}/object/requestCriteria/bookReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+<Field __index="9" __sourcePath="{}/object/requestCriteria/intercompanyJournal" containerType="SINGLE" label="intercompanyJournal" name="intercompanyJournal" type="boolean"/>
+<Field __index="10" __sourcePath="{}/object/requestCriteria/journalNumber" containerType="SINGLE" label="journalNumber" name="journalNumber" type="string"/>
+<Field __index="25" __sourcePath="{}/object/requestCriteria/recurringJournal" containerType="SINGLE" label="recurringJournal" name="recurringJournal" type="boolean"/>
+<Field __index="26" __sourcePath="{}/object/requestCriteria/reversedJournal" containerType="SINGLE" label="reversedJournal" name="reversedJournal" type="boolean"/>
+<Field __index="30" __sourcePath="{}/object/requestCriteria/thresholdMet" containerType="SINGLE" label="thresholdMet" name="thresholdMet" type="boolean"/>
+<Field __dmType="Calendar" __index="31" __sourcePath="{}/object/requestCriteria/updatedFromDate" containerType="SINGLE" label="updatedFromDate" name="updatedFromDate" type="string"/>
+<Field __dmType="Calendar" __index="32" __sourcePath="{}/object/requestCriteria/updatedToDate" containerType="SINGLE" label="updatedToDate" name="updatedToDate" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="36" __referenceCounter="0" __sourcePath="{}/object/requestReferences" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="8404bfab-0f0e-441f-8743-b669f6598725">
+<Record fieldDelimiter="," name="requestReferences" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="39" __referenceCounter="0" __sourcePath="{}/object/responseData" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="7d435572-892c-4437-9932-659ea21e2197">
+<Record fieldDelimiter="," name="responseData" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="124" __referenceCounter="0" __sourcePath="{}/object/responseFilter" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="eb2be791-0951-4514-acff-6fab4050b133">
+<Record fieldDelimiter="," name="responseFilter" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __dmType="Calendar" __index="124" __sourcePath="{}/object/responseFilter/asOfEffectiveDate" containerType="SINGLE" label="asOfEffectiveDate" name="asOfEffectiveDate" type="string"/>
+<Field __dmType="Calendar" __index="125" __sourcePath="{}/object/responseFilter/asOfEntryDateTime" containerType="SINGLE" label="asOfEntryDateTime" name="asOfEntryDateTime" type="string"/>
+<Field __index="126" __sourcePath="{}/object/responseFilter/count" containerType="SINGLE" label="count" name="count" type="decimal"/>
+<Field __index="127" __sourcePath="{}/object/responseFilter/page" containerType="SINGLE" label="page" name="page" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata __index="128" __referenceCounter="0" __sourcePath="{}/object/responseGroup" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="ca6059b3-3a5b-4877-adfa-739c18a579a2">
+<Record fieldDelimiter="," name="responseGroup" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="128" __referenceCounter="0" __sourcePath="{}/object/responseResults" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="30dcb048-a1b2-424d-a593-bbac23f9cb1b" _parent_id="__parent_id" _type="Input" id="6c773a60-17ea-42cd-9eb6-aa2cb30b4f29">
+<Record fieldDelimiter="," name="responseResults" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="128" __sourcePath="{}/object/responseResults/page" containerType="SINGLE" label="page" name="page" type="decimal"/>
+<Field __index="129" __sourcePath="{}/object/responseResults/pageResults" containerType="SINGLE" label="pageResults" name="pageResults" type="decimal"/>
+<Field __index="130" __sourcePath="{}/object/responseResults/totalPages" containerType="SINGLE" label="totalPages" name="totalPages" type="decimal"/>
+<Field __index="131" __sourcePath="{}/object/responseResults/totalResults" containerType="SINGLE" label="totalResults" name="totalResults" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata __index="27" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/statusReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="55449dd3-05b9-4c36-9c32-d4fda68316ed">
+<Record fieldDelimiter="," name="statusReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="29" __sourcePath="{}/object/requestCriteria/statusReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="33" __referenceCounter="0" __sourcePath="{}/object/requestCriteria/worktagsReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="80f56af2-2fe7-41e0-a923-cc53e4eee04e" _parent_id="__parent_id" _type="Input" id="070ca22a-35e2-418f-9385-fecba6d28490">
+<Record fieldDelimiter="," name="worktagsReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="35" __sourcePath="{}/object/requestCriteria/worktagsReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="85" __referenceCounter="0" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/worktagsReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="a1ed0684-c909-4318-a1e8-f782cc60885f" _parent_id="__parent_id" _type="Input" id="1e4f7e62-88d9-4dc1-b286-b5def2dab9bc">
+<Record fieldDelimiter="," name="worktagsReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="87" __sourcePath="{}/object/responseData/journalEntry/journalEntryData/journalEntryLineData/worktagsReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="dict:inputPayload" guiName="Pojo READER" guiX="20" guiY="20" id="BEAN_READER0" type="BEAN_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context outPort="0" sequenceField="__id" xpath="./responseData/journalEntry/journalEntryData/journalEntryLineData">
+  <Mapping cloverField="descriptor" trim="true" xpath="balancingWorktagAffiliateReference/descriptor"/>
+  <Mapping cloverField="budgetDate" trim="true" xpath="budgetDate"/>
+  <Mapping cloverField="creditAmount" trim="true" xpath="creditAmount"/>
+  <Mapping cloverField="currencyRate" trim="true" xpath="currencyRate"/>
+  <Mapping cloverField="descriptor_1" trim="true" xpath="currencyReference/descriptor"/>
+  <Mapping cloverField="debitAmount" trim="true" xpath="debitAmount"/>
+  <Mapping cloverField="excludeFromSpendReport" trim="true" xpath="excludeFromSpendReport"/>
+  <Mapping cloverField="descriptor_2" trim="true" xpath="ledgerAccountReference/descriptor"/>
+  <Mapping cloverField="ledgerCreditAmount" trim="true" xpath="ledgerCreditAmount"/>
+  <Mapping cloverField="ledgerDebitAmount" trim="true" xpath="ledgerDebitAmount"/>
+  <Mapping cloverField="descriptor_3" trim="true" xpath="lineCompanyReference/descriptor"/>
+  <Mapping cloverField="lineOrder" trim="true" xpath="lineOrder"/>
+  <Mapping cloverField="memo" trim="true" xpath="memo"/>
+  <Mapping cloverField="rule_line_Journal_WID" trim="true" xpath="../journalEntryReference/ID[type= 'WID']/value"/>
+  <Mapping cloverField="rule_line_Accounting_Date" trim="true" xpath="../accountingDate"/>
+  <Mapping cloverField="rule_line_Company_ID" trim="true" xpath="../companyReference/ID[type='Company_Reference_ID']/value"/>
+  <Mapping cloverField="rule_line_Ledger_WID" trim="true" xpath="../ledgerReference/ID[type='WID']/value"/>
+  <Mapping cloverField="rule_line_Currency_ID" trim="true" xpath="currencyReference/ID[type='Currency_ID']/value"/>
+  <Mapping cloverField="rule_line_Cost_Center_ID" trim="true" xpath="worktagsReference/ID[type='Cost_Center_Reference_ID']/value"/>
+  <Mapping cloverField="rule_line_Revenue_Category_ID" trim="true" xpath="worktagsReference/ID[type='Revenue_Category_ID']/value"/>
+  <Mapping cloverField="rule_line_Sales_Item" trim="true" xpath="worktagsReference/ID[type='Sales_Item_ID']/value"/>
+  <Mapping cloverField="rule_line_Customer_ID" trim="true" xpath="worktagsReference/ID[type='Customer_ID']/value"/>
+  <Mapping cloverField="rule_line_Ledger_Account_ID" trim="true" xpath="ledgerAccountReference/ID[type= 'Ledger_Account_ID']/value"/>
+  <Mapping cloverField="rule_line_Ledger_Account_Parent_ID" trim="true" xpath="ledgerAccountReference/ID/parentId"/>
+  <Mapping cloverField="rule_line_Company" trim="true" xpath="../companyReference/descriptor"/>
+  <Mapping cloverField="rule_line_Ledger" trim="true" xpath="../ledgerReference/descriptor"/>
+  <Mapping cloverField="rule_line_Cost_Center" trim="true" xpath="worktagsReference[ID/type='Cost_Center_Reference_ID']/descriptor"/>
+  <Mapping cloverField="rule_line_Customer" trim="true" xpath="worktagsReference[ID/type='Customer_ID']/descriptor"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[JAVA]]></attr>
+<attr name="schema"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><schema-object>
+  <typed-object-ref type-ref="com.workday.financial.GetJournalsResponseType"/>
+  <typed-object type="com.workday.financial.CompanyObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BalancingWorktagObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.lang.Boolean"/>
+  <typed-object type="com.workday.financial.JournalEntryType">
+    <schema-collection name="journalEntryData" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryDataType"/>
+    </schema-collection>
+    <typed-object-ref name="journalEntryReference" type-ref="com.workday.financial.JournalEntryObjectType"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.ResponseFilterType">
+    <typed-object-ref name="asOfEffectiveDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="asOfEntryDateTime" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="count" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="page" type-ref="java.math.BigDecimal"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.OrganizationObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BookCodeObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BookCodeObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.LedgerAccountObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.LedgerAccountObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryRequestCriteriaType">
+    <typed-object-ref name="accountingFromDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="accountingToDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="adjustmentJournal" type-ref="java.lang.Boolean"/>
+    <schema-collection name="approvedByPersonReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    </schema-collection>
+    <typed-object-ref name="bookReference" type-ref="com.workday.financial.BookObjectType"/>
+    <typed-object-ref name="intercompanyJournal" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="journalNumber" type-ref="java.lang.String"/>
+    <schema-collection name="journalSourceReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalSourceObjectType"/>
+    </schema-collection>
+    <schema-collection name="ledgerAccountReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.LedgerAccountObjectType"/>
+    </schema-collection>
+    <schema-collection name="organizationReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.OrganizationObjectType"/>
+    </schema-collection>
+    <schema-collection name="originatedByPersonReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    </schema-collection>
+    <typed-object-ref name="recurringJournal" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="reversedJournal" type-ref="java.lang.Boolean"/>
+    <schema-collection name="statusReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryStatusObjectType"/>
+    </schema-collection>
+    <typed-object-ref name="thresholdMet" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="updatedFromDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="updatedToDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <schema-collection name="worktagsReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.AccountingWorktagObjectType"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="com.workday.financial.BookCodeObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryLineDataType">
+    <typed-object-ref name="balancingWorktagAffiliateReference" type-ref="com.workday.financial.BalancingWorktagObjectType"/>
+    <typed-object-ref name="budgetDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="creditAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="currencyRate" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="currencyReference" type-ref="com.workday.financial.CurrencyObjectType"/>
+    <typed-object-ref name="debitAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="excludeFromSpendReport" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="ledgerAccountReference" type-ref="com.workday.financial.LedgerAccountObjectType"/>
+    <typed-object-ref name="ledgerCreditAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="ledgerDebitAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="lineCompanyReference" type-ref="com.workday.financial.CompanyObjectType"/>
+    <typed-object-ref name="lineOrder" type-ref="java.lang.String"/>
+    <typed-object-ref name="memo" type-ref="java.lang.String"/>
+    <schema-collection name="worktagsReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.AccountingWorktagObjectType"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="com.workday.financial.ResponseResultsType">
+    <typed-object-ref name="page" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="pageResults" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="totalPages" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="totalResults" type-ref="java.math.BigDecimal"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BalancingWorktagObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BalancingWorktagObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.AccountingWorktagObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.AccountingWorktagObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.CompanyObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.CompanyObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="byte"/>
+  <typed-object type="com.workday.financial.BookObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryStatusObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.UniqueIdentifierObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.UniqueIdentifierObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalSourceObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalSourceObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryRequestReferencesType">
+    <schema-collection name="journalEntryReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryObjectType"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="com.workday.financial.AccountingWorktagObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.CurrencyObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.OperationalTransactionObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="javax.xml.datatype.XMLGregorianCalendar"/>
+  <typed-object type="com.workday.financial.JournalEntryObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.lang.String"/>
+  <typed-object type="com.workday.financial.OrganizationObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.OrganizationObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryResponseGroupType"/>
+  <typed-object type="com.workday.financial.CurrencyObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.CurrencyObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalSourceObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.LedgerAccountObjectIDType">
+    <typed-object-ref name="parentId" type-ref="java.lang.String"/>
+    <typed-object-ref name="parentType" type-ref="java.lang.String"/>
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryStatusObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryStatusObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.FinancialsAttachmentDataType">
+    <typed-object-ref name="comment" type-ref="java.lang.String"/>
+    <typed-object-ref name="compressed" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="contentType" type-ref="java.lang.String"/>
+    <typed-object-ref name="encoding" type-ref="java.lang.String"/>
+    <schema-collection array="true" name="fileContent">
+      <typed-object-ref type-ref="byte"/>
+    </schema-collection>
+    <typed-object-ref name="filename" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryResponseDataType">
+    <schema-collection name="journalEntry" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryType"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="com.workday.financial.JournalEntryDataType">
+    <typed-object-ref name="accountingDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <schema-collection name="approvedByReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    </schema-collection>
+    <schema-collection name="attachmentData" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.FinancialsAttachmentDataType"/>
+    </schema-collection>
+    <typed-object-ref name="balancingWorktagReference" type-ref="com.workday.financial.BalancingWorktagObjectType"/>
+    <typed-object-ref name="bookCodeReference" type-ref="com.workday.financial.BookCodeObjectType"/>
+    <typed-object-ref name="companyReference" type-ref="com.workday.financial.CompanyObjectType"/>
+    <typed-object-ref name="creationDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="currencyReference" type-ref="com.workday.financial.CurrencyObjectType"/>
+    <schema-collection name="journalEntryLineData" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryLineDataType"/>
+    </schema-collection>
+    <typed-object-ref name="journalEntryReference" type-ref="com.workday.financial.JournalEntryObjectType"/>
+    <typed-object-ref name="journalNumber" type-ref="java.lang.String"/>
+    <typed-object-ref name="journalSourceReference" type-ref="com.workday.financial.JournalSourceObjectType"/>
+    <typed-object-ref name="journalStatusReference" type-ref="com.workday.financial.JournalEntryStatusObjectType"/>
+    <typed-object-ref name="lastUpdatedDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+    <typed-object-ref name="ledgerPeriodReference" type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    <typed-object-ref name="ledgerReference" type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    <typed-object-ref name="memo" type-ref="java.lang.String"/>
+    <typed-object-ref name="operationalTransactionReference" type-ref="com.workday.financial.OperationalTransactionObjectType"/>
+    <typed-object-ref name="originatedByReference" type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    <typed-object-ref name="reversedByJournalEntryReference" type-ref="com.workday.financial.JournalEntryObjectType"/>
+    <typed-object-ref name="reversesJournalEntryReference" type-ref="com.workday.financial.JournalEntryObjectType"/>
+    <typed-object-ref name="totalLedgerCredits" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="totalLedgerDebits" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="transactionDate" type-ref="javax.xml.datatype.XMLGregorianCalendar"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.GetJournalsResponseType">
+    <schema-collection name="requestCriteria" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryRequestCriteriaType"/>
+    </schema-collection>
+    <schema-collection name="requestReferences" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryRequestReferencesType"/>
+    </schema-collection>
+    <schema-collection name="responseData" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryResponseDataType"/>
+    </schema-collection>
+    <schema-collection name="responseFilter" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.ResponseFilterType"/>
+    </schema-collection>
+    <schema-collection name="responseGroup" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.JournalEntryResponseGroupType"/>
+    </schema-collection>
+    <schema-collection name="responseResults" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.ResponseResultsType"/>
+    </schema-collection>
+    <typed-object-ref name="version" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.OperationalTransactionObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.OperationalTransactionObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.math.BigDecimal"/>
+  <typed-object type="com.workday.financial.UniqueIdentifierObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BookObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BookObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+</schema-object>
+]]></attr>
+<attr name="__metadata"><![CDATA[true]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" excludeFields="__id" fileURL="dict:outputPayload" guiName="CSV WRITER" guiX="900" guiY="20" id="DATA_WRITER0" outputFieldNames="true" quotedStrings="true" type="DATA_WRITER">
+<attr name="_data_format"><![CDATA[CSV]]></attr>
+<attr name="__dataSourceDefinition"><![CDATA[C:/Users/rkotzebue/Downloads/Get_Journals-anaplan_pt1-headers.csv]]></attr>
+</Node>
+<Node enabled="enabled" guiName="LineSub" guiX="460" guiY="120" id="FOREACH_JOURNAL_ENTRY_LINE_DATA_GET_JOURNALS_ANAPLAN_PT1_HEADERS" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = str2long(input.__id);
+//END -> DO NOT REMOVE
+output.Journal_WID = input.rule_line_Journal_WID + input.lineOrder;
+
+
+output.Credit_Amount = input.creditAmount;
+
+output.Sales_Item_ID = input.rule_line_Sales_Item;
+output.Customer_ID = input.rule_line_Customer_ID;
+output.Ledger_Account_ID = input.rule_line_Ledger_Account_ID;
+output.Ledger_Account_Parent_ID = input.rule_line_Ledger_Account_Parent_ID;
+output.Revenue_Category_ID = input.rule_line_Revenue_Category_ID;
+output.Cost_Center_ID = input.rule_line_Cost_Center_ID;
+output.Company_ID = input.rule_line_Company_ID;
+output.Ledger_WID = input.rule_line_Ledger_WID;
+output.Debit_Amount = input.debitAmount;
+output.Currency_ID = input.rule_line_Currency_ID;
+output.Accounting_Date = calendar2str(input.rule_line_Accounting_Date,"MM/dd/yyyy");
+output.Company = input.rule_line_Company;
+output.Ledger = input.rule_line_Ledger;
+output.Cost_Center = input.rule_line_Cost_Center;
+output.Customer = input.rule_line_Customer;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Simple Gather" guiX="680" guiY="20" id="SIMPLE_GATHER0" type="SIMPLE_GATHER"/>
+<Edge debugMode="true" fromNode="BEAN_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="a1ed0684-c909-4318-a1e8-f782cc60885f" outPort="Port 0 (out)" toNode="FOREACH_JOURNAL_ENTRY_LINE_DATA_GET_JOURNALS_ANAPLAN_PT1_HEADERS:0"/>
+<Edge debugMode="true" fromNode="FOREACH_JOURNAL_ENTRY_LINE_DATA_GET_JOURNALS_ANAPLAN_PT1_HEADERS:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="77c945e9-bf91-407e-b7e1-bd5676e274b4" outPort="Port 0 (out)" toNode="SIMPLE_GATHER0:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_GATHER0:0" guiBendpoints="" id="Edge3" inPort="Port 0 (in)" metadata="77c945e9-bf91-407e-b7e1-bd5676e274b4" outPort="Port 0 (out)" toNode="DATA_WRITER0:0"/>
+</Phase>
+</Graph>

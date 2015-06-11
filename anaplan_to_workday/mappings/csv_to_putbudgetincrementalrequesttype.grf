@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="zaneconnally" created="Mon Apr 20 17:04:39 PDT 2015" description="CSV To PutBudgetIncrementalRequestType" guiVersion="3.4.4.P" id="1429589115729" licenseCode="Unlicensed" licenseType="Unknown" modified="Mon Apr 20 17:04:39 PDT 2015" modifiedBy="zaneconnally" name="CSV_To_PutBudgetIncrementalRequestType" preview-file="/Users/zaneconnally/Downloads/ForecastExportTest (1).csv" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="4" __referenceCounter="0" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/accountingWorktagReference" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="d50fecdd-35ee-44bc-a327-f8aeef740e50" _parent_id="__parent_id" _type="Output" id="49f55193-059d-410b-b6f1-d6666cf64591">
+<Record fieldDelimiter="," name="accountingWorktagReference" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="6" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/accountingWorktagReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="4" __referenceCounter="1" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="d50fecdd-35ee-44bc-a327-f8aeef740e50">
+<Record fieldDelimiter="," name="budgetIncrementalLineReplacementData" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="7" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/creditAmount" containerType="SINGLE" label="creditAmount" name="creditAmount" type="decimal"/>
+<Field __index="8" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/debitAmount" containerType="SINGLE" label="debitAmount" name="debitAmount" type="decimal"/>
+<Field __index="13" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+<Field __index="18" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_1" type="string"/>
+<Field __index="19" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/lineMemo" containerType="SINGLE" label="lineMemo" name="lineMemo" type="string"/>
+<Field __index="20" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/lineOrder" containerType="SINGLE" label="lineOrder" name="lineOrder" type="string"/>
+</Record>
+</Metadata>
+<Metadata __referenceCounter="8" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _type="Input" id="037cf329-3ae2-4b2b-ba0a-112c88ab0356">
+<Record fieldDelimiter="," name="ForecastExportTest_1" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field containerType="SINGLE" label="Company" name="Company" size="10" type="string"/>
+<Field containerType="SINGLE" label="Cost Center" name="Cost_Center" size="10" type="string"/>
+<Field containerType="SINGLE" label="Customer" name="Customer" size="10" type="string"/>
+<Field containerType="SINGLE" label="Revenue Category" name="Revenue_Category" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger Account" name="Ledger_Account" size="10" type="string"/>
+<Field containerType="SINGLE" label="Period" name="Period" size="10" type="string"/>
+<Field containerType="SINGLE" label="Leaf Node" name="Leaf_Node" size="10" type="string"/>
+<Field containerType="SINGLE" label="Company_Reference_ID" name="Company_Reference_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Budget_Structure_ID" name="Budget_Structure_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Currency_ID" name="Currency_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Year" name="Year" size="10" type="string"/>
+<Field containerType="SINGLE" label="Period" name="Period_1" size="10" type="string"/>
+<Field containerType="SINGLE" label="Fiscal_Posting_Interval_ID" name="Fiscal_Posting_Interval_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Ledger_Account_ID" name="Ledger_Account_ID" size="10" type="string"/>
+<Field containerType="SINGLE" label="Credit_Amount" name="Credit_Amount" size="10" type="string"/>
+<Field containerType="SINGLE" label="Debit_Amount" name="Debit_Amount" size="10" type="string"/>
+<Field containerType="SINGLE" label="Cost_Center_Reference_ID" name="Cost_Center_Reference_ID" size="10" type="string"/>
+<Field containerType="SINGLE" eofAsDelimiter="true" label="Customer_ID" name="Customer_ID" size="10" type="string"/>
+<Field __artificialType="_id" auto_filling="global_row_count" name="__id" type="long"/>
+</Record>
+</Metadata>
+<Metadata __index="1" __referenceCounter="0" __sourcePath="{}/object/budgetData/awardContractReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="4c7e04c2-7ea7-44a0-8aa6-f3676b1700c5">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="1" __sourcePath="{}/object/budgetData/awardContractReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="2" __sourcePath="{}/object/budgetData/awardContractReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="4" __referenceCounter="1" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/accountingWorktagReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="49f55193-059d-410b-b6f1-d6666cf64591" _parent_id="__parent_id" _type="Output" id="79fa8b2b-6dca-4513-b86e-4e331dafc50b">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="4" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/accountingWorktagReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="5" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/accountingWorktagReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="9" __referenceCounter="1" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="d50fecdd-35ee-44bc-a327-f8aeef740e50" _parent_id="__parent_id" _type="Output" id="fcd3eda2-cf4d-4727-b5b2-f27bea237c7f">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="9" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/ID/parentId" containerType="SINGLE" label="parentId" name="parentId" type="string"/>
+<Field __index="10" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/ID/parentType" containerType="SINGLE" label="parentType" name="parentType" type="string"/>
+<Field __index="11" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="12" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="14" __referenceCounter="0" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="d50fecdd-35ee-44bc-a327-f8aeef740e50" _parent_id="__parent_id" _type="Output" id="c537ff8b-e884-4f99-ab48-cdd45f338cda">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="14" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/ID/parentId" containerType="SINGLE" label="parentId" name="parentId" type="string"/>
+<Field __index="15" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/ID/parentType" containerType="SINGLE" label="parentType" name="parentType" type="string"/>
+<Field __index="16" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="17" __sourcePath="{}/object/budgetData/budgetIncrementalLineReplacementData/ledgerAccountSummaryReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="21" __referenceCounter="1" __sourcePath="{}/object/budgetData/budgetStructureReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="03cece0b-cf42-4baf-b457-e06389442fab">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="21" __sourcePath="{}/object/budgetData/budgetStructureReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="22" __sourcePath="{}/object/budgetData/budgetStructureReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="24" __referenceCounter="1" __sourcePath="{}/object/budgetData/companyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="710c487a-ae5e-4277-af63-b28489b30ebd">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="24" __sourcePath="{}/object/budgetData/companyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="25" __sourcePath="{}/object/budgetData/companyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="27" __referenceCounter="1" __sourcePath="{}/object/budgetData/currencyReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="5aa2ad74-42e7-4e59-8e92-5578a8366d07">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="27" __sourcePath="{}/object/budgetData/currencyReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="28" __sourcePath="{}/object/budgetData/currencyReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="30" __referenceCounter="1" __sourcePath="{}/object/budgetData/fiscalTimeIntervalReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="81669c3f-75ef-46c5-85e4-e57fab0f286d">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="30" __sourcePath="{}/object/budgetData/fiscalTimeIntervalReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="31" __sourcePath="{}/object/budgetData/fiscalTimeIntervalReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="33" __referenceCounter="0" __sourcePath="{}/object/budgetData/organizingDimensionReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="99f2fbc2-ab52-4f3c-ba8c-547e99f90589">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="33" __sourcePath="{}/object/budgetData/organizingDimensionReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="34" __sourcePath="{}/object/budgetData/organizingDimensionReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="38" __referenceCounter="0" __sourcePath="{}/object/budgetReference/ID" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="9c418873-0172-4a65-8b36-6863b3b0b509" _parent_id="__parent_id" _type="Output" id="0cfa58f2-6f77-4830-95c7-adaa6627be64">
+<Record fieldDelimiter="," name="ID" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="38" __sourcePath="{}/object/budgetReference/ID/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="39" __sourcePath="{}/object/budgetReference/ID/value" containerType="SINGLE" label="value" name="value" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Output" id="9c418873-0172-4a65-8b36-6863b3b0b509">
+<Record fieldDelimiter="," name="PutBudgetIncrementalRequestType" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/addOnly" containerType="SINGLE" label="addOnly" name="addOnly" type="boolean"/>
+<Field __index="3" __sourcePath="{}/object/budgetData/awardContractReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor" type="string"/>
+<Field __index="23" __sourcePath="{}/object/budgetData/budgetStructureReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_1" type="string"/>
+<Field __index="26" __sourcePath="{}/object/budgetData/companyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_2" type="string"/>
+<Field __index="29" __sourcePath="{}/object/budgetData/currencyReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_3" type="string"/>
+<Field __index="32" __sourcePath="{}/object/budgetData/fiscalTimeIntervalReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_4" type="string"/>
+<Field __index="35" __sourcePath="{}/object/budgetData/organizingDimensionReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_5" type="string"/>
+<Field __index="36" __sourcePath="{}/object/budgetData/planMemo" containerType="SINGLE" label="planMemo" name="planMemo" type="string"/>
+<Field __index="37" __sourcePath="{}/object/budgetData/year" containerType="SINGLE" label="year" length="4" name="year" scale="0" type="decimal"/>
+<Field __index="40" __sourcePath="{}/object/budgetReference/descriptor" containerType="SINGLE" label="descriptor" name="descriptor_6" type="string"/>
+<Field __index="41" __sourcePath="{}/object/version" containerType="SINGLE" label="version" name="version" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Pojo WRITER" guiX="900" guiY="20" id="BEAN_WRITER0" type="BEAN_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="7">
+  <addOnly>$7.addOnly</addOnly>
+  <budgetData>
+    <awardContractReference>
+      <descriptor>$7.descriptor</descriptor>
+    </awardContractReference>
+    <clover:collection clover:name="budgetIncrementalLineReplacementData">
+      <item clover:inPort="5" clover:key="__parent_id" clover:parentKey="__id">
+        <clover:collection clover:name="accountingWorktagReference">
+          <item>
+            <clover:collection clover:name="ID">
+              <item clover:inPort="4" clover:key="__parent_id" clover:parentKey="__id">
+                <type>$4.type</type>
+                <value>$4.value</value>
+              </item>
+            </clover:collection>
+          </item>
+        </clover:collection>
+        <creditAmount>$5.creditAmount</creditAmount>
+        <debitAmount>$5.debitAmount</debitAmount>
+        <ledgerAccountReference>
+          <clover:collection clover:name="ID">
+            <item clover:inPort="3" clover:key="__parent_id" clover:parentKey="__id">
+              <parentId>$3.parentId</parentId>
+              <parentType>$3.parentType</parentType>
+              <type>$3.type</type>
+              <value>$3.value</value>
+            </item>
+          </clover:collection>
+          <descriptor>$5.descriptor</descriptor>
+        </ledgerAccountReference>
+        <ledgerAccountSummaryReference>
+          <descriptor>$5.descriptor_1</descriptor>
+        </ledgerAccountSummaryReference>
+        <lineMemo>$5.lineMemo</lineMemo>
+        <lineOrder>$5.lineOrder</lineOrder>
+      </item>
+    </clover:collection>
+    <budgetStructureReference>
+      <clover:collection clover:name="ID">
+        <item clover:inPort="2" clover:key="__parent_id" clover:parentKey="__id">
+          <type>$2.type</type>
+          <value>$2.value</value>
+        </item>
+      </clover:collection>
+      <descriptor>$7.descriptor_1</descriptor>
+    </budgetStructureReference>
+    <companyReference>
+      <clover:collection clover:name="ID">
+        <item clover:inPort="0" clover:key="__parent_id" clover:parentKey="__id">
+          <type>$0.type</type>
+          <value>$0.value</value>
+        </item>
+      </clover:collection>
+      <descriptor>$7.descriptor_2</descriptor>
+    </companyReference>
+    <currencyReference>
+      <clover:collection clover:name="ID">
+        <item clover:inPort="1" clover:key="__parent_id" clover:parentKey="__id">
+          <type>$1.type</type>
+          <value>$1.value</value>
+        </item>
+      </clover:collection>
+      <descriptor>$7.descriptor_3</descriptor>
+    </currencyReference>
+    <fiscalTimeIntervalReference>
+      <clover:collection clover:name="ID">
+        <item clover:inPort="6" clover:key="__parent_id" clover:parentKey="__id">
+          <type>$6.type</type>
+          <value>$6.value</value>
+        </item>
+      </clover:collection>
+      <descriptor>$7.descriptor_4</descriptor>
+    </fiscalTimeIntervalReference>
+    <organizingDimensionReference>
+      <descriptor>$7.descriptor_5</descriptor>
+    </organizingDimensionReference>
+    <planMemo>$7.planMemo</planMemo>
+    <year>$7.year</year>
+  </budgetData>
+  <budgetReference>
+    <descriptor>$7.descriptor_6</descriptor>
+  </budgetReference>
+  <version>$7.version</version>
+</object>]]></attr>
+<attr name="_data_format"><![CDATA[JAVA]]></attr>
+<attr name="schema"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><schema-object>
+  <typed-object-ref type-ref="com.workday.financial.PutBudgetIncrementalRequestType"/>
+  <typed-object type="com.workday.financial.CompanyObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.PutBudgetIncrementalRequestType">
+    <typed-object-ref name="addOnly" type-ref="java.lang.Boolean"/>
+    <typed-object-ref name="budgetData" type-ref="com.workday.financial.BudgetIncrementalDataType"/>
+    <typed-object-ref name="budgetReference" type-ref="com.workday.financial.UniqueIdentifierObjectType"/>
+    <typed-object-ref name="version" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BudgetIncrementalLineReplacementDataType">
+    <schema-collection name="accountingWorktagReference" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.AccountingWorktagAndAggregationDimensionObjectType"/>
+    </schema-collection>
+    <typed-object-ref name="creditAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="debitAmount" type-ref="java.math.BigDecimal"/>
+    <typed-object-ref name="ledgerAccountReference" type-ref="com.workday.financial.LedgerAccountObjectType"/>
+    <typed-object-ref name="ledgerAccountSummaryReference" type-ref="com.workday.financial.LedgerAccountSummaryObjectType"/>
+    <typed-object-ref name="lineMemo" type-ref="java.lang.String"/>
+    <typed-object-ref name="lineOrder" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.AccountingWorktagAndAggregationDimensionObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.FiscalTimeIntervalObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.FiscalTimeIntervalObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.FiscalTimeIntervalObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BudgetIncrementalDataType">
+    <typed-object-ref name="awardContractReference" type-ref="com.workday.financial.BudgetActivityObjectType"/>
+    <schema-collection name="budgetIncrementalLineReplacementData" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BudgetIncrementalLineReplacementDataType"/>
+    </schema-collection>
+    <typed-object-ref name="budgetStructureReference" type-ref="com.workday.financial.BudgetStructureObjectType"/>
+    <typed-object-ref name="companyReference" type-ref="com.workday.financial.CompanyObjectType"/>
+    <typed-object-ref name="currencyReference" type-ref="com.workday.financial.CurrencyObjectType"/>
+    <typed-object-ref name="fiscalTimeIntervalReference" type-ref="com.workday.financial.FiscalTimeIntervalObjectType"/>
+    <typed-object-ref name="organizingDimensionReference" type-ref="com.workday.financial.AccountingWorktagAndAggregationDimensionObjectType"/>
+    <typed-object-ref name="planMemo" type-ref="java.lang.String"/>
+    <typed-object-ref name="year" type-ref="java.math.BigDecimal"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.LedgerAccountObjectIDType">
+    <typed-object-ref name="parentId" type-ref="java.lang.String"/>
+    <typed-object-ref name="parentType" type-ref="java.lang.String"/>
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.LedgerAccountSummaryObjectIDType">
+    <typed-object-ref name="parentId" type-ref="java.lang.String"/>
+    <typed-object-ref name="parentType" type-ref="java.lang.String"/>
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.CurrencyObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.CompanyObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.CompanyObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BudgetActivityObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BudgetActivityObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.math.BigDecimal"/>
+  <typed-object type="com.workday.financial.UniqueIdentifierObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.LedgerAccountObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.LedgerAccountObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BudgetStructureObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.AccountingWorktagAndAggregationDimensionObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.AccountingWorktagAndAggregationDimensionObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.BudgetActivityObjectIDType">
+    <typed-object-ref name="type" type-ref="java.lang.String"/>
+    <typed-object-ref name="value" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.CurrencyObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.CurrencyObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="com.workday.financial.UniqueIdentifierObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.UniqueIdentifierObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.lang.Boolean"/>
+  <typed-object type="com.workday.financial.LedgerAccountSummaryObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.LedgerAccountSummaryObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+  <typed-object type="java.lang.String"/>
+  <typed-object type="com.workday.financial.BudgetStructureObjectType">
+    <schema-collection name="ID" type="java.util.List">
+      <typed-object-ref type-ref="com.workday.financial.BudgetStructureObjectIDType"/>
+    </schema-collection>
+    <typed-object-ref name="descriptor" type-ref="java.lang.String"/>
+  </typed-object>
+</schema-object>
+]]></attr>
+<attr name="__metadata"><![CDATA[true]]></attr>
+</Node>
+<Node charset="UTF-8" dataPolicy="strict" enabled="enabled" fileURL="dict:inputPayload" guiName="CSV READER" guiX="20" guiY="20" id="DATA_READER0" quoteCharacter="both" quotedStrings="true" skipRows="1" trim="true" type="DATA_READER">
+<attr name="_data_format"><![CDATA[CSV]]></attr>
+<attr name="__dataSourceDefinition"><![CDATA[/Users/zaneconnally/Downloads/ForecastExportTest (1).csv]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Credit_Amount and Debit_Amount" guiX="460" guiY="720" id="FOREACH_FORECAST_EXPORT_TEST_1_BUDGET_INCREMENTAL_LINE_REPLACEMENT_DATA" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.creditAmount = str2decimal(input.Credit_Amount);
+output.debitAmount = str2decimal(input.Debit_Amount);;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Fiscal_Posting_Interval_ID" guiX="460" guiY="620" id="FOREACH_FORECAST_EXPORT_TEST_1_ID" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Fiscal_Posting_Interval_ID;
+output.type = 'Fiscal_Posting_Interval_ID';
+;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Company_Reference_ID" guiX="460" guiY="120" id="FOREACH_FORECAST_EXPORT_TEST_1_ID1" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Company_Reference_ID;
+output.type = 'Company_Reference_ID';;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Currency_ID" guiX="460" guiY="320" id="FOREACH_FORECAST_EXPORT_TEST_1_ID3" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Currency_ID;
+output.type = 'Currency_ID';;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Budget_Structure_ID" guiX="460" guiY="420" id="FOREACH_FORECAST_EXPORT_TEST_1_ID4" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Budget_Structure_ID;
+output.type = 'Budget_Structure_ID';;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Ledger_Account_ID" guiX="460" guiY="520" id="FOREACH_FORECAST_EXPORT_TEST_1_ID5" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Ledger_Account_ID;
+output.parentId = 'ACCOUNT_SET-1';;
+output.parentType = 'Account_Set_ID';;
+output.type = 'Ledger_Account_ID';;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Cost_Center_Reference_ID" guiX="460" guiY="620" id="FOREACH_FORECAST_EXPORT_TEST_1_ID6" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+output.__parent_id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.value = input.Cost_Center_Reference_ID;
+output.type = 'Cost_Center_Reference_ID';;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Year" guiX="460" guiY="720" id="FOREACH_FORECAST_EXPORT_TEST_1_OBJECT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.year = str2decimal(input.Year);
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Simple Copy" guiX="240" guiY="20" id="SIMPLE_COPY0" type="SIMPLE_COPY"/>
+<Edge debugMode="true" fromNode="DATA_READER0:0" guiBendpoints="" id="Edge2" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 0 (output)" toNode="SIMPLE_COPY0:0"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_BUDGET_INCREMENTAL_LINE_REPLACEMENT_DATA:0" guiBendpoints="" id="Edge16" inPort="Port 5 (in)" metadata="d50fecdd-35ee-44bc-a327-f8aeef740e50" outPort="Port 0 (out)" toNode="BEAN_WRITER0:5"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID:0" guiBendpoints="" id="Edge1" inPort="Port 6 (in)" metadata="81669c3f-75ef-46c5-85e4-e57fab0f286d" outPort="Port 0 (out)" toNode="BEAN_WRITER0:6"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID1:0" guiBendpoints="" id="Edge4" inPort="Port 0 (in)" metadata="710c487a-ae5e-4277-af63-b28489b30ebd" outPort="Port 0 (out)" toNode="BEAN_WRITER0:0"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID3:0" guiBendpoints="" id="Edge8" inPort="Port 1 (in)" metadata="5aa2ad74-42e7-4e59-8e92-5578a8366d07" outPort="Port 0 (out)" toNode="BEAN_WRITER0:1"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID4:0" guiBendpoints="" id="Edge10" inPort="Port 2 (in)" metadata="03cece0b-cf42-4baf-b457-e06389442fab" outPort="Port 0 (out)" toNode="BEAN_WRITER0:2"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID5:0" guiBendpoints="" id="Edge12" inPort="Port 3 (in)" metadata="fcd3eda2-cf4d-4727-b5b2-f27bea237c7f" outPort="Port 0 (out)" toNode="BEAN_WRITER0:3"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_ID6:0" guiBendpoints="" id="Edge14" inPort="Port 4 (in)" metadata="79fa8b2b-6dca-4513-b86e-4e331dafc50b" outPort="Port 0 (out)" toNode="BEAN_WRITER0:4"/>
+<Edge debugMode="true" fromNode="FOREACH_FORECAST_EXPORT_TEST_1_OBJECT:0" guiBendpoints="" id="Edge6" inPort="Port 7 (in)" metadata="9c418873-0172-4a65-8b36-6863b3b0b509" outPort="Port 0 (out)" toNode="BEAN_WRITER0:7"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:0" guiBendpoints="" id="Edge3" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 0 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID1:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:1" guiBendpoints="" id="Edge7" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 1 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID3:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:2" guiBendpoints="" id="Edge9" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 2 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID4:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:3" guiBendpoints="" id="Edge11" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 3 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID5:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:4" guiBendpoints="" id="Edge13" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 4 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID6:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:5" guiBendpoints="" id="Edge15" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 5 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_BUDGET_INCREMENTAL_LINE_REPLACEMENT_DATA:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:6" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 6 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_ID:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY0:7" guiBendpoints="" id="Edge5" inPort="Port 0 (in)" metadata="037cf329-3ae2-4b2b-ba0a-112c88ab0356" outPort="Port 7 (out)" toNode="FOREACH_FORECAST_EXPORT_TEST_1_OBJECT:0"/>
+</Phase>
+</Graph>
